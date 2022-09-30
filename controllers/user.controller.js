@@ -1,7 +1,6 @@
 let users = require('../JsonFile/users.json')
 
 
-
 module.exports.getAllUsers = (req, res)=>{
     const {limit, page} = req.query;
     console.log(limit, page)
@@ -37,7 +36,7 @@ module.exports.updateUser = (req, res) =>{
 
 module.exports.deleteUser = (req, res) =>{
     const {id} = req.params;
-    const filter = {_id: id};
+    // const filter = {_id: id};
 
     users = users.filter(user => user.id !== Number(id));
 

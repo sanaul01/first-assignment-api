@@ -19,7 +19,7 @@ app.use(express.json());
 dbConnect();
 
 
-app.use('/users', userRouter)
+app.use('/user', userRouter)
 
 
 async function run(){
