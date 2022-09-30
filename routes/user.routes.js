@@ -15,12 +15,18 @@ const router = express.Router();
 //     res.send('user can added')
 // })
 
+// limiter,
+
 router
-    .route('/')
+    .route('/all')
         .get(usersControllers.getAllUsers)
 
         .post(usersControllers.saveAUser);
     
-    router.route("/:id").get( viewCount, limiter, usersControllers.getUserDetail);
+    router
+    .route("/:id")
+    .get( viewCount, usersControllers.getUserDetail)
+    .patch( usersControllers.updateUser)
+    .delete(usersControllers.deleteUser)
 
 module.exports = router;
