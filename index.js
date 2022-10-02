@@ -38,7 +38,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res)=>{
-    res.send('running first api')
+    res.send('First backend server')
 });
 
 app.all("*", (req, res)=>{
